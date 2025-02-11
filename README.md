@@ -15,7 +15,6 @@ O portfólio inclui:
 ## Tecnologias Utilizadas
 - **Front-end:** HTML, CSS, JavaScript
 - **Back-end:** PHP
-- **Banco de Dados:** SQL / SQL Server
 
 ## Funcionalidades
 - Apresentação interativa dos projetos desenvolvidos.
