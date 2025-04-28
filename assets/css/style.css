@@ -1,0 +1,33 @@
+.glightbox,.details-link{
+    color: #000;
+    border: none;
+    background: #f8f8f8;
+    transition: background 0.3s ease-in-out;
+}
+
+.glightbox:hover,.details-link:hover {
+    background: #2a7db3; /* Azul mais sofisticado */
+    transition: background 0.3s ease-in-out;
+}
+
+/* Por padrão, exibe a classe para dispositivos móveis */
+.portfolio_responsivo {
+    display: block;
+}
+
+/* Oculta a versão para computador por padrão */
+.portfolio_comp {
+    display: none;
+}
+
+/* Para telas maiores (computador), invertemos as exibições */
+@media (min-width: 768px) {
+    .portfolio_responsivo {
+        display: none; /* Esconde a versão mobile */
+    }
+
+    .portfolio_comp {
+        display: block; /* Exibe a versão desktop */
+    }
+}
+
