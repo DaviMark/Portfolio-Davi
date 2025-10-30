@@ -108,6 +108,8 @@ filtroItens.forEach(item => {
           proj.classList.remove('oculto');
         } else if (
           (filtro === 'analise' && tipo.includes('análise')) ||
+          (filtro === 'ciencia' && tipo.includes('ciência')) ||
+          (filtro === 'engenharia' && tipo.includes('engenharia')) ||
           (filtro === 'automacao' && tipo.includes('automação')) ||
           (filtro === 'web' && tipo.includes('web'))
         ) {
