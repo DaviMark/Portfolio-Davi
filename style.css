@@ -1162,6 +1162,61 @@ body {
   }
 }
 
+/* Style de Ler mais e Ler menos */
+
+.ler-mais-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+/* Botão estilo minimalista e consistente com o site */
+.btn-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.8rem;
+  background: #fffef6;
+  border: 2px solid #000;
+  border-radius: 40px;
+  color: #000;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-toggle:hover {
+  background: #f0f733;
+  border-color: #f0f733;
+  transform: translateY(-2px);
+}
+
+.btn-toggle i {
+  transition: transform 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.btn-toggle.active i {
+  transform: rotate(180deg);
+}
+
+/* Transição suave das experiências ocultas */
+.ocultas {
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.ocultas.mostrar {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 
 /* Section 5 */

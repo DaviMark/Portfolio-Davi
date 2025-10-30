@@ -124,3 +124,20 @@ filtroItens.forEach(item => {
     }, 400);
   });
 });
+
+
+// Js sobre Ler mais e Ler menos
+
+const btnToggle = document.getElementById('btn-toggle');
+const experienciasOcultas = document.getElementById('experiencias-ocultas');
+
+btnToggle.addEventListener('click', () => {
+  experienciasOcultas.classList.toggle('mostrar');
+  btnToggle.classList.toggle('active');
+
+  if (experienciasOcultas.classList.contains('mostrar')) {
+    btnToggle.querySelector('span').textContent = 'Ler menos';
+  } else {
+    btnToggle.querySelector('span').textContent = 'Ler mais';
+  }
+});
