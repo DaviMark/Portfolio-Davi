@@ -141,20 +141,3 @@ btnToggle.addEventListener('click', () => {
     btnToggle.querySelector('span').textContent = 'Ler mais';
   }
 });
-
-
-
-// Vercel Analytics
-
-// Chama o Vercel Analytics para começar a monitorar a página
-  window.VercelAnalytics = window.VercelAnalytics || function() {
-    (window.VercelAnalytics.q = window.VercelAnalytics.q || []).push(arguments);
-  };
-  
-  // Inicia o tracking de visualização
-  VercelAnalytics('init', {
-    projectId: 'prj_j3I17ohWXSHVObrlqf6gxewppLAy', // Substitua 'seu_project_id' com o ID do seu projeto Vercel
-  });
-
-  // Envia um evento de página
-  VercelAnalytics('trackPage');

@@ -1032,9 +1032,24 @@ dos sistemas de dados da empresa
 <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <script async src="https://analytics.vercel.app/analytics.js"></script> 
+  
   <script src="main.js"></script>
   
+  <script async src="https://analytics.vercel.app/analytics.js"></script>
+<script>
+  window.VercelAnalytics = window.VercelAnalytics || function() {
+    (window.VercelAnalytics.q = window.VercelAnalytics.q || []).push(arguments);
+  };
+  
+  // Inicializa o Analytics com o ID do seu projeto
+  VercelAnalytics('init', {
+    projectId: 'prj_j3I17ohWXSHVObrlqf6gxewppLAy',
+  });
+  
+  // Envia o evento de tracking de página
+  VercelAnalytics('trackPage');
+</script>
+
 
 </body>
 </html>
