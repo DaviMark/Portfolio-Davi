@@ -153,7 +153,7 @@ btnToggle.addEventListener('click', () => {
   
   // Inicia o tracking de visualização
   VercelAnalytics('init', {
-    projectId: 'prj_JTkt182WLnKigwr0rxqmpyfydkEC', // Substitua 'seu_project_id' com o ID do seu projeto Vercel
+    projectId: 'prj_j3I17ohWXSHVObrlqf6gxewppLAy', // Substitua 'seu_project_id' com o ID do seu projeto Vercel
   });
 
   // Envia um evento de página
