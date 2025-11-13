@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
 
+    <!-- Script do LinkedIn -->
+<script src="https://platform.linkedin.com/in.js" async defer></script>
+
 <meta name="description" content="Davi Marques é especialista em Análise de Dados e Desenvolvimento Web, criando soluções inovadoras com Python, Power BI e frameworks modernos.">
 
 <!-- Palavras-chave do site -->
@@ -43,6 +46,7 @@
   <nav id="nav-menu" class="nav-menu">
     <ul>
       <li><a href="#sobre">Sobre mim</a></li>
+      <li><a href="#posts">Publicações</a></li>
       <li><a href="#portfolio">Portfólio</a></li>
       <li><a href="#curriculo">Currículo</a></li>
       <li><a href="#servicos">Serviços</a></li>
@@ -136,6 +140,177 @@
   </div>
 </section>
 
+<!-- CASES DE DESTAQUE SECTION -->
+<section id="posts" class="cases-destaque-section">
+    <div class="cases-destaque-container">
+        <div class="cases-destaque-header">
+            <p class="cases-destaque-label">• CASES DE DESTAQUE</p>
+            <h2 class="cases-destaque-title">Acompanhe meus posts</h2>
+        </div>
+        
+        <div class="cases-destaque-carousel-wrapper">
+            <div class="cases-destaque-carousel" id="casesCarousel">
+                <!-- Post 1 -->
+                <div class="cases-destaque-item">
+                    <div class="cases-destaque-card">
+                        <div class="cases-destaque-card-header">
+                            <div class="cases-destaque-avatar">
+                                <img src="https://media.licdn.com/dms/image/v2/D4D03AQG9UuGbVsCftw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1723642600413?e=1764806400&v=beta&t=nS14xMt1l6q5lkUSAB153H75pM4O5mO-IBy9oE0g98U" alt="Avatar">
+                            </div>
+                            <div class="cases-destaque-author">
+                                <h3>Davi Marques</h3>
+                                <p>Especialista em Análise de Dados</p>
+                                <span class="cases-destaque-date">há 2 dias</span>
+                            </div>
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7391602304862404608/" target="_blank" class="cases-destaque-linkedin-link">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="#0A66C2">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- Carrossel de imagens -->
+                        <div class="cases-destaque-images-carousel" data-carousel="0">
+                            <div class="cases-destaque-images-container">
+                                <img src="https://media.licdn.com/dms/image/v2/D4E22AQGXrh4L5NX3eg/feedshare-shrink_2048_1536/B4EZpQ_HepGYA0-/0/1762295316774?e=1764806400&v=beta&t=PPmzE58IKj9EGgEKCoWLLTUyu7d1qdyacrq58Wvw4b4" alt="Dashboard Analytics">
+                                <img src="https://media.licdn.com/dms/image/v2/D4E22AQEUXYuowmaO3A/feedshare-shrink_2048_1536/B4EZpQ_HfVGUAw-/0/1762295316018?e=1764806400&v=beta&t=R_N44ZXVh-KXSabyHr0udP7xGCzL_1NMyAn_hJBYbs8" alt="Data Analysis">
+                                <img src="https://media.licdn.com/dms/image/v2/D4E22AQGE0s6jCgvLnQ/feedshare-shrink_1280/B4EZpQ_HeIGYAs-/0/1762295316176?e=1764806400&v=beta&t=7TapPgGBdzrXIKakDtlRc4wk4jxUazP1mdNUyWmrYTI" alt="Business Metrics">
+                            </div>
+                            <div class="cases-destaque-images-nav">
+                                <button class="cases-destaque-img-btn cases-destaque-img-prev" onclick="prevImage(0)">‹</button>
+                                <button class="cases-destaque-img-btn cases-destaque-img-next" onclick="nextImage(0)">›</button>
+                            </div>
+                            <div class="cases-destaque-images-dots" id="dots-0"></div>
+                        </div>
+
+                        <div class="cases-destaque-card-content">
+                            <p class="cases-destaque-post-text" id="text-0">
+                              Você já usou HTML dentro do Power BI?
+
+                              Em conversas com alguns analistas e desenvolvedores, percebi um movimento cada vez maior: o uso de visuais HTML dentro do Power BI.
+                              E foi aí que uma ideia me bateu: se no front-end temos bibliotecas como Bootstrap, Tailwind CSS e muitas outras, por que não criar uma biblioteca específica de visuais HTML para o Power BI (mas uma versão mini delas 😄)?
+
+                              Quem trabalha com dados sabe que em um dashboard uma das principais funções é gerar insights para Gestores, Coordenadores e lideres em geral para tomada de decisão ou compreender casos, mas com o passar do tempo e até para desenvolver uma cultura data-driven percebemos que não basta funcionar, TEM QUE IMPRESSIONAR!
+
+                              Gerar insights é essencial, mas criar uma experiência visual que prenda a atenção do gestor faz toda a diferença.
+
+                              Com essa proposta, nasceu o "UI Power Pack", que está disponível no link do primeiro comentario!
+
+                              É uma coleção de componentes HTML e CSS prontos para você inserir nos seus dashboards e transformar completamente o visual dos seus painéis.
+                              Hoje já são 30+ visuais, entre cards, tooltips, labels e documentações, e tem muito mais por vir.
+                              Também deixei alguns exemplos mostrando como um simples card pode se transformar em um card impressionante, além de uma forma criativa de incluir aquela breve explicação sobre o nosso querido (e polêmico) “Exportar para o Excel”. 
+                              Uma breve demonstração do que podemos construir com esse conhecimento.
+
+                              E incluí uma página explicando o passo a passo de como implementar os códigos no Power BI e uma área para quem quiser colaborar com o projeto.
+                              Basta enviar seu componente pelo formulário e você aparece como criador do visual na galeria.
+
+                              O objetivo é ajudar a comunidade de dados a entregar dashboards que comuniquem melhor, inspirem mais e tenham aquele toque de “uau”.                            
+                            </p>
+                            <button class="cases-destaque-read-more" onclick="toggleReadMore(0)">Ler mais</button>
+                        </div>
+
+                        <div class="cases-destaque-card-stats">
+                            <div class="cases-destaque-stat">
+                                <span class="cases-destaque-stat-icon">👍</span>
+                                <span class="cases-destaque-stat-value">90</span>
+                            </div>
+                            <div class="cases-destaque-stat">
+                                <span class="cases-destaque-stat-icon">💬</span>
+                                <span class="cases-destaque-stat-value">38</span>
+                            </div>
+                            <div class="cases-destaque-stat">
+                                <span class="cases-destaque-stat-icon">🔄</span>
+                                <span class="cases-destaque-stat-value">1</span>
+                            </div>
+                        </div>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7391602304862404608/" target="_blank" class="cases-destaque-card-link">
+                            Ver no LinkedIn →
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Post 2 -->
+                <div class="cases-destaque-item">
+                    <div class="cases-destaque-card">
+                        <div class="cases-destaque-card-header">
+                            <div class="cases-destaque-avatar">
+                                <img src="https://media.licdn.com/dms/image/v2/D4D03AQG9UuGbVsCftw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1723642600413?e=1764806400&v=beta&t=nS14xMt1l6q5lkUSAB153H75pM4O5mO-IBy9oE0g98U" alt="Avatar">
+                            </div>
+                            <div class="cases-destaque-author">
+                                <h3>Davi Marques</h3>
+                                <p>Especialista em Análise de Dados</p>
+                                <span class="cases-destaque-date">há 5 dias</span>
+                            </div>
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7394482521528483840/" target="_blank" class="cases-destaque-linkedin-link">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="#0A66C2">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- Carrossel de imagens -->
+                        <div class="cases-destaque-images-carousel" data-carousel="1">
+                            <div class="cases-destaque-images-container">
+                                <img src="/posts/1.png" alt="Pipeline Architecture">
+                                <img src="/posts/2.png" alt="Code Review">
+                                <img src="/posts/3.png" alt="Code">
+                            </div>
+                            <div class="cases-destaque-images-nav">
+                                <button class="cases-destaque-img-btn cases-destaque-img-prev" onclick="prevImage(1)">‹</button>
+                                <button class="cases-destaque-img-btn cases-destaque-img-next" onclick="nextImage(1)">›</button>
+                            </div>
+                            <div class="cases-destaque-images-dots" id="dots-1"></div>
+                        </div>
+
+                        <div class="cases-destaque-card-content">
+                            <p class="cases-destaque-post-text" id="text-1">
+                              Sejamos sinceros… quem aqui nunca pensou:
+                              “Será que não dá pra melhorar ainda mais?” 🤔
+                              Com o tempo, depois de tantos dashboards, até os melhores visuais perdem o impacto.
+                              (E eu sei que até você percebeu isso, e tenta inovar a cada entrega… vai dizer que não?)
+
+                              Aquele “uau!” da primeira apresentação vira só mais um relatório na rotina. Os usuários já não se surpreendem, apenas consomem.
+
+                              E pior: às vezes, você ainda precisa disputar atenção com quem faz relatórios no Excel, cheios de colunas coloridas e firulas “visuais”, só pra parecer bonito na reunião.
+
+                              📊 Um dashboard comum entrega números.
+                              🎨 Um dashboard bem desenhado entrega insights, experiência, clareza e emoção.
+                              E é exatamente isso que o UI Power Pack propõe:
+                              Fazer seus dashboards voltarem a encantar, com design moderno, fluidez e um toque premium, com uma galeria de 50+ componentes HTML e JSON para você utilizar.                            
+                            </p>
+                            <button class="cases-destaque-read-more" onclick="toggleReadMore(1)">Ler mais</button>
+                        </div>
+
+                        <div class="cases-destaque-card-stats">
+                            <div class="cases-destaque-stat">
+                                <span class="cases-destaque-stat-icon">👍</span>
+                                <span class="cases-destaque-stat-value">41</span>
+                            </div>
+                            <div class="cases-destaque-stat">
+                                <span class="cases-destaque-stat-icon">💬</span>
+                                <span class="cases-destaque-stat-value">1</span>
+                            </div>
+                            <div class="cases-destaque-stat">
+                                <span class="cases-destaque-stat-icon">🔄</span>
+                                <span class="cases-destaque-stat-value">1</span>
+                            </div>
+                        </div>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7394482521528483840/" target="_blank" class="cases-destaque-card-link">
+                            Ver no LinkedIn →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Adicione mais posts aqui conforme necessário -->
+
+
+            </div>
+
+            <!-- Indicadores de navegação -->
+            <div class="cases-destaque-indicators" id="casesIndicators"></div>
+        </div>
+    </div>
+</section>
 
 <!-- Section 3 -->
 

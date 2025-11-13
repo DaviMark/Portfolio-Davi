@@ -141,3 +141,153 @@ btnToggle.addEventListener('click', () => {
     btnToggle.querySelector('span').textContent = 'Ler mais';
   }
 });
+
+ // Armazenar estado de cada carrossel de imagens
+    const imageCarousels = {};
+
+    // Inicializar carrosséis de imagens
+    function initImageCarousels() {
+        const carousels = document.querySelectorAll('.cases-destaque-images-carousel');
+        carousels.forEach((carousel, index) => {
+            const images = carousel.querySelectorAll('.cases-destaque-images-container img');
+            const dotsContainer = document.getElementById(`dots-${index}`);
+            
+            imageCarousels[index] = {
+                currentIndex: 0,
+                totalImages: images.length
+            };
+
+            // Ativar primeira imagem
+            if (images.length > 0) {
+                images[0].classList.add('active');
+            }
+
+            // Criar dots
+            for (let i = 0; i < images.length; i++) {
+                const dot = document.createElement('div');
+                dot.className = `cases-destaque-image-dot ${i === 0 ? 'active' : ''}`;
+                dot.onclick = () => goToImage(index, i);
+                dotsContainer.appendChild(dot);
+            }
+        });
+    }
+
+    function nextImage(carouselIndex) {
+        const carousel = imageCarousels[carouselIndex];
+        carousel.currentIndex = (carousel.currentIndex + 1) % carousel.totalImages;
+        updateImageCarousel(carouselIndex);
+    }
+
+    function prevImage(carouselIndex) {
+        const carousel = imageCarousels[carouselIndex];
+        carousel.currentIndex = (carousel.currentIndex - 1 + carousel.totalImages) % carousel.totalImages;
+        updateImageCarousel(carouselIndex);
+    }
+
+    function goToImage(carouselIndex, imageIndex) {
+        imageCarousels[carouselIndex].currentIndex = imageIndex;
+        updateImageCarousel(carouselIndex);
+    }
+
+    function updateImageCarousel(carouselIndex) {
+        const carouselElement = document.querySelector(`[data-carousel="${carouselIndex}"]`);
+        const images = carouselElement.querySelectorAll('.cases-destaque-images-container img');
+        const dots = carouselElement.querySelectorAll('.cases-destaque-image-dot');
+        const currentIndex = imageCarousels[carouselIndex].currentIndex;
+
+        images.forEach((img, i) => {
+            img.classList.toggle('active', i === currentIndex);
+        });
+
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    // Funcionalidade de Ler Mais / Ler Menos
+    function toggleReadMore(postIndex) {
+        const textElement = document.getElementById(`text-${postIndex}`);
+        const button = textElement.nextElementSibling;
+        
+        textElement.classList.toggle('expanded');
+        button.textContent = textElement.classList.contains('expanded') ? 'Ler menos' : 'Ler mais';
+    }
+
+    // Função para gerenciar o carrossel principal e indicadores
+    function initCasesCarousel() {
+        const carousel = document.getElementById('casesCarousel');
+        const indicatorsContainer = document.getElementById('casesIndicators');
+        const items = carousel.querySelectorAll('.cases-destaque-item');
+        
+        if (items.length === 0) return;
+
+        // Criar indicadores
+        items.forEach((_, index) => {
+            const indicator = document.createElement('div');
+            indicator.className = 'cases-destaque-indicator';
+            if (index === 0) indicator.classList.add('active');
+            indicator.addEventListener('click', () => scrollToItem(index));
+            indicatorsContainer.appendChild(indicator);
+        });
+
+        // Atualizar indicadores ao fazer scroll
+        carousel.addEventListener('scroll', updateIndicators);
+        window.addEventListener('resize', updateIndicators);
+
+        // Atualizar indicadores inicialmente
+        updateIndicators();
+    }
+
+    function scrollToItem(index) {
+        const carousel = document.getElementById('casesCarousel');
+        const items = carousel.querySelectorAll('.cases-destaque-item');
+        if (items[index]) {
+            items[index].scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+                inline: 'center'
+            });
+        }
+    }
+
+    function updateIndicators() {
+        const carousel = document.getElementById('casesCarousel');
+        const indicators = document.querySelectorAll('.cases-destaque-indicator');
+        const items = carousel.querySelectorAll('.cases-destaque-item');
+        
+        if (items.length === 0) return;
+
+        // Encontrar qual item está mais visível
+        const carouselRect = carousel.getBoundingClientRect();
+        const carouselCenter = carouselRect.left + carouselRect.width / 2;
+        
+        let closestIndex = 0;
+        let closestDistance = Infinity;
+
+        items.forEach((item, index) => {
+            const itemRect = item.getBoundingClientRect();
+            const itemCenter = itemRect.left + itemRect.width / 2;
+            const distance = Math.abs(itemCenter - carouselCenter);
+            
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestIndex = index;
+            }
+        });
+
+        // Atualizar indicadores
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === closestIndex);
+        });
+    }
+
+    // Inicializar quando o DOM estiver pronto
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+            initImageCarousels();
+            initCasesCarousel();
+        });
+    } else {
+        initImageCarousels();
+        initCasesCarousel();
+    }
